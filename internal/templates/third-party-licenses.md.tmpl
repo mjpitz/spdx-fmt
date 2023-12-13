@@ -1,0 +1,16 @@
+# Third Party Licenses
+
+- **Created:** _{{ .CreationInfo.Created }}_
+{{- range .Packages }}
+{{- if .FilesAnalyzed }}
+- **License:** `{{ .PackageLicenseConcluded }}`
+{{- end }}
+{{- end }}
+
+| Library | Version | License |
+|---------|---------|---------|
+{{- range .Packages }}
+{{- if not .FilesAnalyzed }}
+| `{{ .PackageName }}` | `{{ .PackageVersion }}` | `{{ .PackageLicenseConcluded }}` |
+{{- end }}
+{{- end }}

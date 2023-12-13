@@ -1,0 +1,31 @@
+# {{ .DocumentName }}
+
+- **SPDX:** _{{ .SPDXVersion }}_
+- **Data License:** _{{ .DataLicense }}_
+- **Namespace:** _{{ .DocumentNamespace }}_
+- **Created:** _{{ .CreationInfo.Created }}_
+{{- range .Packages }}
+{{- if .FilesAnalyzed }}
+- **License:** `{{ .PackageLicenseConcluded }}`
+{{- end }}
+{{- end }}
+
+### Packages
+
+| Library | Version | License |
+|---------|---------|---------|
+{{- range .Packages }}
+{{- if not .FilesAnalyzed }}
+| `{{ .PackageName }}` | `{{ .PackageVersion }}` | `{{ .PackageLicenseConcluded }}` |
+{{- end }}
+{{- end }}
+
+### Files
+
+| File | File Types | License |
+|------|------------|---------|
+{{- range .Files }}
+{{- if (hasPrefix ".git" .FileName | not) | and (hasPrefix ".idea" .FileName | not) }}
+| `{{ .FileName }}` | {{ .FileTypes | join ", " }} | `{{ .LicenseConcluded }}` |
+{{- end }}
+{{- end }}
