@@ -3,7 +3,7 @@ Easily convert `spdx.json` files into human-readable, markdown files.
 ## Installation
 
 ```shell
-go install go.pitz.tech/spdx-to-md@latest
+go install go.pitz.tech/spdx-fmt@latest
 ```
 
 ### Usage
@@ -13,7 +13,7 @@ files, we can generate human-readable versions of their contents as well as arti
 as reporting on third-party licenses).
 
 ```shell
-Usage of spdx-to-md:
+Usage of spdx-fmt:
   -input string
         Specify the input spdx.json file. Defaults to '-' for stdin. (default "-")
   -output string

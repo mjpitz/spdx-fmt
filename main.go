@@ -15,7 +15,7 @@ import (
 	"github.com/Masterminds/sprig/v3"
 	"github.com/spdx/tools-golang/spdx/v2/v2_3"
 
-	"go.pitz.tech/spdx-to-md/internal/templates"
+	"go.pitz.tech/spdx-fmt/internal/templates"
 )
 
 //go:generate
@@ -65,7 +65,7 @@ func run(input, output, report string) (err error) {
 		}
 	}
 
-	t, err := template.New("spdx-to-md").
+	t, err := template.New("spdx-fmt").
 		Funcs(sprig.FuncMap()).
 		Parse(string(contents))
 
@@ -77,7 +77,7 @@ func run(input, output, report string) (err error) {
 }
 
 func main() {
-	cli := flag.NewFlagSet("spdx-to-md", flag.ExitOnError)
+	cli := flag.NewFlagSet("spdx-fmt", flag.ExitOnError)
 
 	input := cli.String("input", "-", "Specify the input spdx.json file. Defaults to '-' for stdin.")
 	output := cli.String("output", "-", "Specify the output markdown file. Defaults to '-' for stdout.")

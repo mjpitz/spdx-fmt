@@ -1,9 +1,9 @@
-# spdx-to-md
+# spdx-fmt
 
 - **Document Version:** _SPDX-2.3_
 - **Data License:** _CC0-1.0_
-- **Namespace:** _https://spdx-to-md.pitz.tech_
-- **Created:** _2023-12-14T05:16:40Z_
+- **Namespace:** _https://spdx-fmt.pitz.tech_
+- **Created:** _2023-12-14T05:31:10Z_
 - **License:** `MIT`
 
 ### Packages

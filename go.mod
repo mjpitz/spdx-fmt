@@ -1,4 +1,4 @@
-module go.pitz.tech/spdx-to-md
+module go.pitz.tech/spdx-fmt
 
 go 1.20
 

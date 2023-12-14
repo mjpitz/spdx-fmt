@@ -1,5 +1,5 @@
-namespace: https://spdx-to-md.pitz.tech
+namespace: https://spdx-fmt.pitz.tech
 license: MIT
-name: spdx-to-md
+name: spdx-fmt
 creator:
   tool: bom
