@@ -18,7 +18,7 @@ import (
 	"go.pitz.tech/spdx-to-md/internal/templates"
 )
 
-//go:generate addlicense -f ./legal/header.txt -skip tmpl .
+//go:generate
 
 func run(input, output, report string) (err error) {
 	fileIn := os.Stdin

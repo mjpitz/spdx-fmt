@@ -1,0 +1,5 @@
+namespace: https://spdx-to-md.pitz.tech
+license: MIT
+name: spdx-to-md
+creator:
+  tool: bom
